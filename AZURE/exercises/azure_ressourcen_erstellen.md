@@ -34,7 +34,12 @@ You also have to create a new App Service Plan, you can do this directly from he
 
 # With Azure CLI
 
-Firstly, to create a ServiceGroup, issue this command. This creates a new ServiceGroup under the name "myResourceGroupCli".
+Before you can do anything, you have to be logged in.
+This is done interactively with this command:
+
+    az login
+
+Then, to create a ServiceGroup, issue this command. This creates a new ServiceGroup under the name "myResourceGroupCli".
 
     az group create -l eastus -n myResourceGroupCli
 
