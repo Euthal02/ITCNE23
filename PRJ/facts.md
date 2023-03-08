@@ -1,0 +1,1 @@
+IPERKA ist Einzelmanagmentmethode.

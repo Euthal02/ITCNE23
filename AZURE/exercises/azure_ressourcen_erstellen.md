@@ -53,6 +53,19 @@ Now, with the ressource-group and the App plan created, we can finally actually 
 
 # With Powershell CMDlets
 
+To use this method, you to firstly install the Powershell Module.
 
+    Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
 
+Once you installed the module, you have to log in. So that the module uses your Azure account. This will open a Browser window, which connects the module to your Azure Account.
+
+    Connect-AzAccount
+
+With this command, you can create a Ressource Group.
+
+    New-AzResourceGroup -Name ResourceGroupPowershell -Location "East US"
+
+Inside the Ressource Group, you can now create a Ressource.
+
+    New-AzResource -Location "East US" -Properties @{test="test"} -ResourceName MarcoDennisPowershell -ResourceType microsoft.web/sites -ResourceGroupName ResourceGroupPowershell -Force
 
