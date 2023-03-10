@@ -1,5 +1,7 @@
 # Hermes
 
+![Hermes Header](https://raw.githubusercontent.com/Euthal02/ITCNE23/main/PRJ/ressources/hermes/HERMES_Internet_Manual.png)
+
 ## Was ist Hermes?
 Die Projektmanagementmethode "Hermes" ist eine Schweizer Methode, die in der öffentlichen Verwaltung sowie in anderen Branchen angewendet werden kann. 
 
