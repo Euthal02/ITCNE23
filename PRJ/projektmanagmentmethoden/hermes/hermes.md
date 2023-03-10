@@ -63,12 +63,90 @@ Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des
 
 ## Was kann Hermes?
 
-### Vorteile / Nachteile
+#### Vorteile:
+
+1. Standardisiertes Vorgehen: 
+    HERMES bietet ein strukturiertes und standardisiertes Vorgehen für Projektmanagement, was dazu beiträgt, dass Projekte effizient und zielorientiert durchgeführt werden können.
+
+2. Flexibilität:
+    HERMES ist eine flexible Methode, die auf die Bedürfnisse des Projekts angepasst werden kann. Es bietet verschiedene Vorgehensmodelle und Phasen, die je nach Projekt unterschiedlich eingesetzt werden können.
+
+3. Klare Rollen und Verantwortlichkeiten:
+    HERMES definiert klare Rollen und Verantwortlichkeiten für die Projektbeteiligten, was dazu beiträgt, dass das Projektteam effektiv zusammenarbeiten und das Projektziel erreichen kann.
+
+#### Nachteile:
+
+1. Komplexität:
+    Die HERMES-Methode kann für unerfahrene Projektmanager oder für kleine Projekte als zu komplex empfunden werden.
+
+2. Dokumentationsaufwand:
+    Die HERMES-Methode legt großen Wert auf Dokumentation und Berichtswesen, was für manche Projekte einen höheren Aufwand bedeutet.
+
+3. Begrenzte Anpassung:
+    Obwohl HERMES flexibel ist, kann es schwierig sein, die Methode für bestimmte Projekte oder Branchen anzupassen, da sie ursprünglich für die Verwaltung von IT-Projekten entwickelt wurde.
 
 ### Einsatzzweck von Hermes
+
+HERMES ist eine Projektmanagement-Methode, die in der Schweiz entwickelt wurde und auch in anderen Ländern eingesetzt wird. Die Methode hat ihren Schwerpunkt auf der Durchführung von IT-Projekten, kann aber auch für andere Arten von Projekten angewendet werden.
+
+Der Einsatzzweck von HERMES besteht darin, eine strukturierte und standardisierte Vorgehensweise für die Planung, Durchführung und Kontrolle von Projekten zu bieten. Durch die klare Definition von Rollen, Verantwortlichkeiten und Prozessen soll sichergestellt werden, dass Projekte effektiv und effizient durchgeführt werden und die Projektziele erreicht werden können. HERMES bietet dabei eine hohe Flexibilität, sodass die Methode je nach Projektart und Projektumfang angepasst werden kann.
+
+Insgesamt eignet sich HERMES insbesondere für komplexe Projekte mit vielen Beteiligten und einem hohen Risiko- und Veränderungsmanagementbedarf. HERMES stellt sicher, dass Projekte transparent und nachvollziehbar durchgeführt werden und so ein hoher Projekterfolg erzielt wird.
 		
-### Wie geht man mit Hermes vor?
+## Wie geht man mit Hermes vor?
+
+Bei Hermes gibt es zwei unterschiedliche Methoden zur effektiven Umsetzung, die klassische Methode und die agile Methode.
+
+### Klassisch
+
+1. Initiation:
+
+    In dieser Phase wird das Projekt initialisiert. Das bedeutet, dass das Projektziel, der Projektauftrag, die Rahmenbedingungen und die Projektorganisation festgelegt werden.
+
+2. Konzeption:
+
+    In dieser Phase wird das Projektkonzept ausgearbeitet. Das bedeutet, dass das Lasten- und Pflichtenheft erstellt wird, die Risiken identifiziert werden und das Projektbudget festgelegt wird.
+
+3. Realisierung:
+
+    In dieser Phase wird das Projekt umgesetzt. Das bedeutet, dass das Projektteam die Arbeitspakete und Meilensteine festlegt, die Aufgaben verteilt und die Arbeit durchführt.
+
+4. Einführung:
+
+    In dieser Phase wird das Projekt implementiert. Das bedeutet, dass die Ergebnisse des Projekts in Betrieb genommen werden, Schulungen durchgeführt werden und eine Support-Organisation aufgebaut wird.
+
+5. Abschluss:
+
+    In dieser Phase wird das Projekt abgeschlossen. Das bedeutet, dass eine Abschlussdokumentation erstellt wird, die Ergebnisse bewertet und die Projekterfahrungen dokumentiert werden.
+
+Mit diese Methode werden Meilensteine abgearbeitet.
+
+![Hermes Klassisch](../../ressources/hermes/Hermes_Klassisch.png)
+
+### Agil
+
+1. Initiation:
+
+    In dieser Phase wird das Projekt initialisiert. Das bedeutet, dass das Projektziel, der Projektauftrag, die Rahmenbedingungen und die Projektorganisation festgelegt werden.
+
+2. Umsetzung:
+
+    Die Umsetzungsphase, fässt als Agile-Methode die 3 Phasen "Konzeption,Realisierung und Einführung" zusammen.
+    Die Lösungsanforderungen werden weiter aufgeteilt, verfeinert und konkretisiert. Die Anforderungen werden aktualisiert und priorisiert und nach absteigender Priorität abgearbeitet (entwickelt, realisiert und in Betrieb genommen), wobei die Prioritäten kontinuierlich aktualisiert und den Projekterkenntnissen entsprechend angepasst. Dadurch wird das ganze Projekt agiler.
+
+5.  Abschluss:
+
+    In dieser Phase wird das Projekt abgeschlossen. Das bedeutet, dass eine Abschlussdokumentation erstellt wird, die Ergebnisse bewertet und die Projekterfahrungen dokumentiert werden.
+
+Mit dieser Methode wird mit Releases und Releasefreigaben gearbeitet.
+
+ ![Hermes Agil](../../ressources/hermes/Hermes_Agil.png)
+
 		
 ### Praxisbeispiel
 
+[Am 26. April 2006 wurde das Projekt Quapital (QUAlité des Projets d'Implémentation des Technologies de l'information et de la communication dans l'Administration Luxembourgeoise) der Regierung von Luxemburg vorgestellt. Das Ziel vom Teilbereich Quapital Werkzeuge ist es konsistente Daten auf allen Ebenen (Projekt, Programm und Portfolio) zu erhalten. Dieses Tool basiert vollständig auf Quapital-Hermes.](https://de.wikipedia.org/wiki/Hermes_(Projektmanagementmethode))
+
 ## Abschluss
+
+Hermes ist ein interessantes Projektmanagment, welches ich persönlich schon länger kennenlernen wollte. Diese Möglichkeit hat sich mit jetzt geboten.
