@@ -1,36 +1,45 @@
 # Hermes
 
-![Hermes Header](https://raw.githubusercontent.com/Euthal02/ITCNE23/main/PRJ/ressources/hermes/HERMES_Internet_Manual.png)
+![Hermes Header](../../ressources/hermes/hermes_header.png)
 
 ## Was ist Hermes?
-Die Projektmanagementmethode "Hermes" ist eine Schweizer Methode, die in der öffentlichen Verwaltung sowie in anderen Branchen angewendet werden kann. 
+Die Projektmanagementmethode "Hermes" ist eine Schweizer Methode, die in der öffentlichen Verwaltung sowie in anderen Branchen angewendet werden kann. Sie wurde von der schweizerischen Bundesverwaltung 1975 entwickelt, steht als offener Standard frei zur Verfügung und ist als Standard eCH-0054 vom Verein eCH anerkannt.
+
+Die Methode wird kontinuierlich verbessert und geupdated.
+Der Bund bietet dazu Online sehr viele Informationen an:
+
+https://www.hermes.admin.ch/
+
+---
 
 Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des Projektmanagements abdeckt. Zu den wichtigsten Merkmalen von Hermes gehören: 
 
 1.  Strukturierte Phasen: 
 
-    Hermes teilt das Projekt in sechs Phasen ein, die von der Ideenfindung bis zur Umsetzung reichen. 
-    
-    Jede Phase wird sorgfältig geplant und dokumentiert, um sicherzustellen, dass das Projekt erfolgreich abgeschlossen wird. 
+    Hermes teilt das Projekt in Phasen ein, die von der Initialisierung bis zur Umsetzung reichen. Jede Phase wird sorgfältig geplant und dokumentiert, um sicherzustellen, dass das Projekt erfolgreich abgeschlossen wird. Die neuste Hermes Variante unterstützt Phasen für die agile Projektführung, wie auch die klassische Variante.
 
-2. Rollen und Verantwortlichkeiten: 
+    ![](../../ressources/hermes/hermes_phasen.png)
+
+    Innerhalb der einzelnen Phasen werden Module eingesetzt, welche einzelne Teilschritte des Projekts darstellen. Phasen stellen den Projektfortschritt dar. Einzelne Module (wie zb. das Standardmodul [Projektführung](https://www.hermes.admin.ch/de/pjm-2022/verstehen/module/projektfuehrung.html)) können dabei in mehreren Phasen auftreten.
+
+2. Module:
+
+    Module enthalten thematisch zusammengehörende Aufgaben und Ergebnisse. Sie sind Bausteine zur Erstellung von Projekten und Szenarien. Das Modul Projektführung enthaltet zum Beispiel die Aufgabe 
+    [Qualitätssicherung führen](https://www.hermes.admin.ch/de/pjm-2022/verstehen/aufgaben/qualitaetssicherung-fuehren.html). Aufgaben werden im nächsten Punkt genauer beschrieben. Diese Aufgaben führen immer zu Ergebnissen.
+    
+    Hermes biete eine Vielzahl von Standardmodulen, welche individuell angepasst werden können, oder sogar durch komplett eigene Module ersetzt werden können.
+
+3. Aufgaben:
+
+    Aufgaben sind bestimmten Rollen zugeteilt und werden immer mit Ergebnissen in Verbindung gebracht. 
+
+4. Ergebnisse:
+
+
+
+5. Rollen und Verantwortlichkeiten: 
 
     Hermes definiert klare Rollen und Verantwortlichkeiten für alle Projektbeteiligten, einschließlich des Projektmanagers, des Projektteams und der Stakeholder. 
-
-3. Risikomanagement: 
-
-    Hermes legt großen Wert auf das Risikomanagement und fordert die Projektbeteiligten auf, potenzielle Risiken frühzeitig zu identifizieren und geeignete Maßnahmen zu ergreifen, um sie zu minimieren oder zu vermeiden.
-     
-4. Projektcontrolling: 
-    
-    Hermes sieht vor, dass das Projektcontrolling kontinuierlich während des gesamten Projekts durchgeführt wird, um sicherzustellen, dass das Projekt den definierten Zielen und Anforderungen entspricht. 
-
-5. Dokumentation: 
-    
-    Hermes betont die Bedeutung der Dokumentation und des Berichtswesens, um sicherzustellen, dass alle Projektbeteiligten über den Fortschritt und den Status des Projekts informiert sind. 
-    
-    Insgesamt ist Hermes eine umfassende Projektmanagementmethode, die darauf abzielt, Projekte effektiv und effizient zu planen, umzusetzen und zu kontrollieren, während gleichzeitig die Qualität und die Zufriedenheit der Stakeholder gewährleistet werden.
-
 
 ## Was kann Hermes?
 
