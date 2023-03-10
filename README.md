@@ -6,10 +6,10 @@ For a quick overview, these were the modules:
 
 - NWA1 (Network technologies and architectures)
 - AWS (AWS Cloud)
-- IaC (Infrastructure as Code, Bash, Cloud-Init)
+- [IaC (Infrastructure as Code, Bash, Cloud-Init)](IaC/README.md)
 - PE (Leadership, Communication, Personality development)
-- AZURE (AZURE Cloud)
+- [AZURE (AZURE Cloud)](AZURE/README.md)
 - MAAS (Private Cloud [MAAS.io](https://maas.io/))
-- PRJ (Projectmanagement (Overview, Agil, Scrum))
+- [PRJ (Projectmanagement (Overview, Agil, Scrum))](PRJ/README.md)
 
 For more specific information about the course, visit the [TBZ website](https://tbz.ch/weiterbildung-tbz/it-services-engineer-hf-2/). 
