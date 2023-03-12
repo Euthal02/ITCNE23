@@ -134,7 +134,7 @@ Mit diese Methode werden Meilensteine abgearbeitet.
     Die Umsetzungsphase, fässt als Agile-Methode die 3 Phasen "Konzeption,Realisierung und Einführung" zusammen.
     Die Lösungsanforderungen werden weiter aufgeteilt, verfeinert und konkretisiert. Die Anforderungen werden aktualisiert und priorisiert und nach absteigender Priorität abgearbeitet (entwickelt, realisiert und in Betrieb genommen), wobei die Prioritäten kontinuierlich aktualisiert und den Projekterkenntnissen entsprechend angepasst. Dadurch wird das ganze Projekt agiler.
 
-5.  Abschluss:
+3.  Abschluss:
 
     In dieser Phase wird das Projekt abgeschlossen. Das bedeutet, dass eine Abschlussdokumentation erstellt wird, die Ergebnisse bewertet und die Projekterfahrungen dokumentiert werden.
 
@@ -149,4 +149,4 @@ Mit dieser Methode wird mit Releases und Releasefreigaben gearbeitet.
 
 ## Abschluss
 
-Hermes ist ein interessantes Projektmanagment, welches ich persönlich schon länger kennenlernen wollte. Diese Möglichkeit hat sich mit jetzt geboten.
+Hermes ist ein interessantes Projektmanagment, welches ich persönlich schon länger kennenlernen wollte. Diese Möglichkeit hat sich mir jetzt geboten.
