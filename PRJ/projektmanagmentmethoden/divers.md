@@ -46,3 +46,48 @@ Muda Mura Muri vermeiden.
 * Engpässe
 * Weniger Spielraum
 * Produktvielfalt
+
+# Wasserfall und Prince2
+
+[Präsentation](https://tbzedu-my.sharepoint.com/:p:/g/personal/yves_wetter_edu_tbz_ch/EaBJeiXuH1VOr2_fZBEJVmYBocZxCNF1QxTf6VQmP3WBEg?e=hcgpSl)
+
+Linear und klare Methode
+
+Anforderungen
+Lösungsideen
+Umsetzung
+Testzeitraum
+Lifecycle
+
++ Abgrenzung
++ Planung und Kontrolle
+
+- Unflexibel
+
+# Kanban
+
+KANBAN = Schild
+
+Von Toyota entwickelt.
+Nachempfunden einer Regallauffüllmethode.
+
+## Prinzipien
+
+Pull System: Arbeiten sequentiell
+Visuelle Steuerung: Arbeit visuell darstellen-
+Begrenzung des Arbeitsflusses: Arbeit limitieren.
+Kontinuierliche Verbessserung: Arbeit verbessern.
+
+## Kanban Board
+
+Darstellung der Arbeitsschritte.
+
+## Vorteile
+- Flexibel
+- Effizient
+- Qualität
+- Zusammenarbeit
+
+## Nachteile
+- Knowledge
+- Komplexität
