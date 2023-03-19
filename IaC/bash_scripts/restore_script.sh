@@ -18,7 +18,7 @@ fi
 input_file=$1
 output_folder=$2
 
-tar –xvzf "$input_file" "$output_folder"
+tar –xvzf "$input_file" -C "$output_folder"
 unpacked_files=$( total_files "$output_folder" )
 unpacked_directories=$( total_directories "$output_folder" )
 
