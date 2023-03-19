@@ -1,0 +1,23 @@
+#cloud-config
+groups:
+  - students
+
+users:
+  - default
+  - name: bob
+    primary_group: students
+    groups: sudo
+  - name: john
+    primary_group: students
+    groups: sudo
+
+ssh_pwauth: true
+chpasswd:
+  expire: false
+  users:
+    - name: bob
+      password: password1
+      type: text
+    - name: john
+      password: password2
+      type: text
