@@ -20,11 +20,19 @@ Um unsere Fähigkeit mit den Azure Storage Types umgehen zu können, haben wir d
 ![upload_pictures](../ressources/pictures/storage_account/upload_into_containers.PNG)
 
 ## Azure CLI oder Powershell
-- Generiere einen SAS Token mit CLI/ PS
-- Erstelle eine Verbindung wiederum mit deinem *generierten SAS Token URL*
-- Lade weitere files hoch mit dem azcopy Befehl/ azure powershell
-- Dokumentiere dein Skript in deinem E-Portfolio
+Um dasselbe mit Azure Powershell hinzukriegen, müssen folgende Commands ausgeführt werden.
+Zuerst verbinden wir uns Interaktiv mit Azure.
+    
+    connect-azuread
 
+Dann erstellen wir ein SAS Token, welches wir später verwenden können.
+ 
+
+    New-AzStorageAccountSASToken -Context $context -Service Blob -ResourceType Service -Permission racwdlup -ExpiryTime (Get-Date).AddDays(1)
+
+Mit diesem SAS Token, können wir anschliessend azcopy nutzen um Files zu uploaden.
+
+    azcopy copy "C:\local\path" "https://marcotestblobstorage.blob.core.windows.net/bildertest/?sv=2021-10-04&ss=b&srt=s&se=2023-03-28T18%3A35%3A04Z&sp=rwdlacup&sig=%2BB477C%2FMhvzQtlrB8JIM5YPaSUiOb6fvMiIOrTN2Gjw%3D" --recursive=true
 
 ## Fragen
 - In welchen Fällen sollte man *Account SAS* verwenden?
