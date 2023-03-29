@@ -15,39 +15,9 @@ runcmd:
   - wget https://wordpress.org/latest.tar.gz -O /tmp/wordpress.tar.gz
   - cd /tmp/ ; tar -xzvf /tmp/wordpress.tar.gz 
   - rm -f /var/www/html/index.html ; mv wordpress/* /var/www/html/
+  - cd ~
+  - wget https://raw.githubusercontent.com/Euthal02/ITCNE23/main/IaC/bash_scripts/wordpress_cloud_init/mysql.sh -O .
+  - wget https://raw.githubusercontent.com/Euthal02/ITCNE23/main/IaC/bash_scripts/wordpress_cloud_init/wordpress.sh -O .
+  - chown root:root *.sh ; chmod 755 *.sh
   - /var/tmp/mysql.sh
   - /var/tmp/wordpress.sh
-  
-write_files:
-- encoding: b64
-  content: | 
-    IyEvYmluL2Jhc2gKCm15c3FscGFzc3dkPSQocHdnZW4gNDAgMSkKbXlzcWx1c2VyPSQocHdnZW4g
-    LTAgMTAgMSkKbXlzcWwgLXUgcm9vdCA8PEVPRgpjcmVhdGUgZGF0YWJhc2Ugd29yZHByZXNzOwpH
-    UkFOVCBBTEwgUFJJVklMRUdFUyBPTiB3b3JkcHJlc3MuKiBUTyAiJG15c3FsdXNlciJAImxvY2Fs
-    aG9zdCIgSURFTlRJRklFRCBCWSAiJG15c3FscGFzc3dkIjsKRU9GCmVjaG8gJG15c3FscGFzc3dk
-    Pi92YXIvdG1wL215c3FscGFzc3dkCmVjaG8gJG15c3FsdXNlcj4vdmFyL3RtcC9teXNxbHVzZXIK
-  owner: root:root
-  path: /var/tmp/mysql.sh
-  permissions: '0755'
-- encoding: b64
-  content: |
-    IyEvYmluL2Jhc2gKCm15c3FsdXNlcj0kKGNhdCAvdmFyL3RtcC9teXNxbHVzZXIpCm15c3FscGFzc3dk
-    PSQoY2F0IC92YXIvdG1wL215c3FscGFzc3dkKQoKY2QgL3Zhci93d3cvaHRtbApjcCB3cC1jb25maWct
-    c2FtcGxlLnBocCB3cC1jb25maWcucGhwCnNlZCAtaSAtZSAncy9kYXRhYmFzZV9uYW1lX2hlcmUvd29y
-    ZHByZXNzLycgd3AtY29uZmlnLnBocApzZWQgLWkgLWUgInMvdXNlcm5hbWVfaGVyZS8kbXlzcWx1c2Vy
-    LyIgd3AtY29uZmlnLnBocApzZWQgLWkgLWUgInMvcGFzc3dvcmRfaGVyZS8kbXlzcWxwYXNzd2QvIiB3
-    cC1jb25maWcucGhwCnNlZCAtaSAtZSAiL1NFQ1VSRV9BVVRIX0tFWS8gcy9wdXQgeW91ciB1bmlxdWUg
-    cGhyYXNlIGhlcmUvJChwd2dlbiA1MCAxKS8iIHdwLWNvbmZpZy5waHAKc2VkIC1pIC1lICIvQVVUSF9L
-    RVkvIHMvcHV0IHlvdXIgdW5pcXVlIHBocmFzZSBoZXJlLyQocHdnZW4gNTAgMSkvIiB3cC1jb25maWcu
-    cGhwCnNlZCAtaSAtZSAiL0xPR0dFRF9JTl9LRVkvIHMvcHV0IHlvdXIgdW5pcXVlIHBocmFzZSBoZXJl
-    LyQocHdnZW4gNTAgMSkvIiB3cC1jb25maWcucGhwCnNlZCAtaSAtZSAiL05PTkNFX0tFWS8gcy9wdXQg
-    eW91ciB1bmlxdWUgcGhyYXNlIGhlcmUvJChwd2dlbiA1MCAxKS8iIHdwLWNvbmZpZy5waHAKc2VkIC1p
-    IC1lICIvU0VDVVJFX0FVVEhfU0FMVC8gcy9wdXQgeW91ciB1bmlxdWUgcGhyYXNlIGhlcmUvJChwd2dl
-    biA1MCAxKS8iIHdwLWNvbmZpZy5waHAKc2VkIC1pIC1lICIvQVVUSF9TQUxULyBzL3B1dCB5b3VyIHVu
-    aXF1ZSBwaHJhc2UgaGVyZS8kKHB3Z2VuIDUwIDEpLyIgd3AtY29uZmlnLnBocApzZWQgLWkgLWUgIi9M
-    T0dHRURfSU5fU0FMVC8gcy9wdXQgeW91ciB1bmlxdWUgcGhyYXNlIGhlcmUvJChwd2dlbiA1MCAxKS8i
-    IHdwLWNvbmZpZy5waHAKc2VkIC1pIC1lICIvTk9OQ0VfU0FMVC8gcy9wdXQgeW91ciB1bmlxdWUgcGhy
-    YXNlIGhlcmUvJChwd2dlbiA1MCAxKS8iIHdwLWNvbmZpZy5waHAK
-  owner: root:root
-  path: /var/tmp/wordpress.sh
-  permissions: '0755'
