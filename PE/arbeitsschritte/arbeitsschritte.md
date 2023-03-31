@@ -12,8 +12,6 @@ Während der Umsetzung versuche ich mich am mein "Playbook" zu halten und werde 
 
 Ist mein geplanter SOLL Zustand erreicht, wird das ganze getestet. Fallen keine Zwischenfälle auf, wird das dokumentiert und in den laufenden Betrieb eingebunden.
 
-
-
 ## Welche Fähigkeiten brauche ich dafür?
 
 * Analytik

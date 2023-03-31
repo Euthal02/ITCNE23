@@ -36,7 +36,19 @@ Mit diesem SAS Token, können wir anschliessend azcopy nutzen um Files zu upload
 
 ## Fragen
 - In welchen Fällen sollte man *Account SAS* verwenden?
+Für einen vorübergehenden programmatischen Zugriff auf eine Ressource.
+
 - Welche andere Connection-Möglichkeiten bietet das Tool *Azure Storage Explorer* an?
+Verbindungszeichenfolge (Schlüssel oder SAS)
+SAS-URL (Shared Access Signature)
+Kontoname und -schlüssel
+
 - Weshalb gibt es bei storage account zwei signing keys?
+Damit die Keys einer nach dem anderen rotiert werden können.
+
 - Gibt es Empfehlungen/ best practices für die Verwendung von SAS/ Storage keys?
+
+
 - Beischreibe, wie du die Anforderung *least privilege* umgesetzt hast.
+![least_priviledge_principle](../ressources/pictures/storage_account/least_priviledge.PNG)
+Ich habe möglichst wenige Optionen aktiviert.
