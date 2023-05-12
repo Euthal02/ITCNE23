@@ -1,0 +1,15 @@
+#cloud-config
+
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBFS7MJgnwxktTTQS41EIj5/LLfG8G6mvqQ6NRnwdOIZ marcokaelin@gmx.net
+
+write_files:
+- path: /tmp/gitlabkey
+  permissions: '0600'
+  content: |
+SSH-KEY-PLACE
+
+runcmd:
+- export GIT_SSH_COMMAND="ssh -i /tmp/gitlabkey -o StrictHostKeyChecking=no"
+- git clone git@gitlab.com:meuthak1/ePortfolio.git
+- touch /etc/cloud/cloud-init.disabled
