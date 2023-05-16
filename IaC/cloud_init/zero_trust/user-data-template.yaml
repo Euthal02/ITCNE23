@@ -11,5 +11,6 @@ SSH-KEY-PLACE
 
 runcmd:
 - export GIT_SSH_COMMAND="ssh -i /tmp/gitlabkey -o StrictHostKeyChecking=no"
+- cd /home/ubuntu
 - git clone git@gitlab.com:meuthak1/ePortfolio.git
 - touch /etc/cloud/cloud-init.disabled
