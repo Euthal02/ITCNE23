@@ -1,0 +1,80 @@
+Migros:
+  vars:
+    ansible_group_priority: 10
+  children:
+    Migrosdatenbank:
+      vars:
+        Username: Migrosdb
+        Password: Login4Migrosdb
+      hosts:
+        Migrosdb01:
+          ansible_user: ubuntu
+          ansible_host: 3.73.130.6
+    Migroswebserver:
+      vars:
+        Username: Migrosws
+        Password: Login4Migrosws
+      hosts:
+        Migrosws01:
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+Coop:
+  vars:
+    ansible_group_priority: 10
+  children:
+    Coopdatenbank:
+      hosts:
+        Coopdb01:
+          ansible_user: ubuntu
+          ansible_host: 3.73.130.68
+    Coopwebserver:
+      hosts:
+        Coopws01:
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+Lidl:
+  vars:
+    ansible_group_priority: 10
+  children:
+    Lidldatenbank:
+      vars:
+        Username: Lidldb
+        Password: Login4Lidldb
+      hosts:
+        Lidldb01:
+          ansible_user: ubuntu
+          ansible_host: 3.73.130.68
+        Lidldb02:
+          Username: test
+          Password: test
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+    Lidlwebserver:
+      vars:
+        Username: Lidlws
+        Password: Login4Lidlws
+      hosts:
+        Lidlws01:
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+        Lidlws02:
+          Username: test
+          Password: test
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+Datenbankserver:
+  vars:
+    Username: standard
+    Password: standard
+  children:
+    Migrosdatenbank:
+    Coopdatenbank:
+    Lidldatenbank:
+Webserver:
+  vars:
+    Username: standard
+    Password: standard
+  children:
+    Migroswebserver:
+    Coopwebserver:
+    Lidlwebserver:
