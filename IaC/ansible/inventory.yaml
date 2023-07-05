@@ -14,6 +14,7 @@ Migros:
       vars:
         Username: Migrosws
         Password: Login4Migrosws
+        virtualhostname: migros.ch
       hosts:
         Migrosws01:
           ansible_user: ubuntu
@@ -28,6 +29,8 @@ Coop:
           ansible_user: ubuntu
           ansible_host: 3.73.130.68
     Coopwebserver:
+      vars:
+        virtualhostname: coop.ch
       hosts:
         Coopws01:
           ansible_user: ubuntu
@@ -53,6 +56,7 @@ Lidl:
       vars:
         Username: Lidlws
         Password: Login4Lidlws
+        virtualhostname: lidl.ch
       hosts:
         Lidlws01:
           ansible_user: ubuntu
