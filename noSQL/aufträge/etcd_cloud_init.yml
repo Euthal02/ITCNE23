@@ -1,0 +1,60 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRI4IqTl6RNGbOJlpVLT6qSuRa34FqHtdOQaq1vxgTPPDesHMGrTIM2jaS2S6HgKMgW3C8COFXR23SQAcyF2C9G+H4MzTge/dmpFDJh3ram2N7HC/N1tB76W0nA05aQWvDHAHSqqB20pAstxvtq8DteGERCNj6sl9GRKDxwXdAthuRXwq+dM05cq6T7vDki/yMmJUYRmyGBEzKfci6XYBMQ079I/4x33NGGqsK23wFb3khqziCUTRtCwJe7frX9Z1ak2JG9RMdEf4l/5kGjOez0VptMcpdZM4C7uyklFtGIb9OjAPLHowgq0cCB9bL7h86U5FkdejLkC87Uzhm/Fo7 teacher
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCJSgqbqL0xTjq3LdV/9SvGy3tDfN7oaeKjVyaTREBv2WJSQqebh/Lwx3FoC+YOtkK5N8WcA4UpU21mhT9441L4UKOH4unVsVPKAsr3pCF76/eVRp6ese1ZoXmozuJDKQIEVVNleRivNDJaVKql8uvuandifmAd3UB+61kzOKGYw8V3o8Y7OnjnTbTKcxeuRImDdh+oxR6/AdIiF0OsiiMJwqQQvQMmMaMMf59lcIPlsQHluZMg0fylgb/VYkV2XxKE1TRR99Z0XnJzlm6GnTD4zSATGCpi7pTW9S3CjW0mvJNCEw2WWAYSzy+CxWBdjRNSZZFbt55hN6dJvb9MTcrXgdlpwS2SYWz633Sm7CUISY3WgsXkQFu1Iu6R2Alzw/Y7iMZyjcI/feMl7GCmjNk12bX4NC1Sxm4ByUJXoio5EjY9pWDhJ+rWUXNT4bza7hfbh6iwV9eQmLTE1RcmDtKMFx2sUMVU6jFBdIlLNVhXU0yVPCoWKGiRXeo6QhahiP8= marco@Tuxedo-Laptop
+ssh_pwauth: true
+disable_root: false
+package_update: true   
+packages:
+  - curl
+  - wget
+
+write_files:
+  - path: /etc/systemd/system/etcd.service
+    content: | 
+      [Unit]
+      Description=etcd - highly-available key value store
+      Documentation=https://etcd.io/docs
+      Documentation=man:etcd
+      After=network.target
+      Wants=network-online.target
+
+      [Service]
+      Environment=DAEMON_ARGS=
+      Environment=ETCD_NAME=%H
+      Environment=ETCD_DATA_DIR=/var/lib/etcd/default
+      EnvironmentFile=-/etc/default/%p
+      Type=notify
+      User=ubuntu
+      PermissionsStartOnly=true
+      #ExecStart=/bin/sh -c "GOMAXPROCS=$(nproc) /usr/bin/etcd $DAEMON_ARGS"
+      ExecStart=/usr/local/bin/etcd $DAEMON_ARGS
+      Restart=on-abnormal
+      #RestartSec=10s
+      LimitNOFILE=65536
+
+      [Install]
+      WantedBy=multi-user.target
+      Alias=etcd2.service
+    owner: 'root:root'
+    permissions: '0644'
+
+runcmd:
+  - wget https://github.com/etcd-io/etcd/releases/download/v3.5.6/etcd-v3.5.6-linux-amd64.tar.gz
+  - tar xvf etcd-v3.5.6-linux-amd64.tar.gz
+  - mv etcd-v3.5.6-linux-amd64 etcd
+  - cd etcd
+  - sudo mv etcd etcdctl etcdutl /usr/local/bin/
+  - sudo mkdir -p /var/lib/etcd/default
+  - sudo mkdir /etc/etcd/
+  - sudo chown -R ubuntu:ubuntu /var/lib/etcd
+  - sudo systemctl daemon-reload
+  - sudo systemctl enable etcd.service
+  - sudo systemctl start etcd.service
+
