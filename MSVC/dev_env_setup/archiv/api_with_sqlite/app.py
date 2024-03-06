@@ -4,7 +4,6 @@ from flask_sqlalchemy import SQLAlchemy
 from apiflask.fields import String, Integer
 from apiflask.validators import OneOf, Length
 from os import path as os_path
-from os import environ as os_environ
 
 # define the schema for the post input
 class PostStudentIn(Schema):
@@ -22,9 +21,7 @@ app = APIFlask(__name__)
 
 # define DB value
 basedir = os_path.abspath(os_path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = os_environ.get('DATABASE_URI')\
-        or 'sqlite:///' + os_path.join(basedir, 'app.db')
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os_path.join(basedir, 'app.db')
 
 # create ORM (OBJECT RELATION MANAGEMENT)
 db = SQLAlchemy(app)
