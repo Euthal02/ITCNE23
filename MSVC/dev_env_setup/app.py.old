@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+
+def association_exists(student_id, course_id):
+    query = db.exists().where(
+        (student_courses_association.c.student_id == student_id) &
+        (student_courses_association.c.course_id == course_id)
+    )
+    return db.session.query(query).scalar()
+
+# register student for course
+@app.post('/register_student_for_course')
+@app.input(RegistrationIn, location='json')
+@app.output(StudentOut, status_code=201)
+def create_association(json_data):
+    student_id = json_data["student_id"]
+    course_id = json_data["course_id"]
+
+    student = db.get_or_404(StudentsModel, student_id)
+    course = db.get_or_404(CoursesModel, course_id)
+
+    exists = association_exists(student_id, course_id)
+    if exists:
+        return {"message": "Association already exists"}
+    else:
+        student.courses.append(course)
+        course.students.append(student)
+        
+        db.session.commit()
+        return student
+
+# remove student from course
+@app.delete('/remove_student_from_course')
+@app.input(RegistrationIn, location='json')
+@app.output(StudentOut, status_code=201)
+def delete_association(json_data):
+    student_id = json_data["student_id"]
+    course_id = json_data["course_id"]
+
+    student = db.get_or_404(StudentsModel, student_id)
+    course = db.get_or_404(CoursesModel, course_id)
+
+    exists = association_exists(student_id, course_id)
+    if exists:
+        student.courses.remove(course)
+        #course.students.remove(student)
+
+        db.session.commit()
+        return student
+    else:
+        return {"message": "Association already removed"}
