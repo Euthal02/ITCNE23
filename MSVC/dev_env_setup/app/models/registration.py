@@ -19,6 +19,6 @@ class RegistrationOut(Schema):
 class RegistrationModel(db.Model):
     __tablename__ = 'student_courses_association'
     id = db.Column(db.Integer, primary_key=True)
-    student_id = db.Column(db.Integer, db.ForeignKey('courses.id'))
-    course_id = db.Column(db.Integer, db.ForeignKey('students.id'))
+    student_id = db.Column(db.Integer, db.ForeignKey('courses.id'), primary_key=True)
+    course_id = db.Column(db.Integer, db.ForeignKey('students.id'), primary_key=True)
     mark = db.Column(db.Float)

@@ -22,6 +22,6 @@ def create_app(config_class=Config):
 
     @app.get('/')
     def absolute_root_path():
-        return {'message': 'This is the root directory of my Flask Server. Try GET /student'}
+        return {'message': 'this is the feature branch'}
 
     return app

@@ -1,0 +1,6 @@
+__pycache__/
+app/_pycache__/
+app/students/_pycache__/
+app/models/_pycache__/
+app/courses/_pycache__/
+compose.yaml
