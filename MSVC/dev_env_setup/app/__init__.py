@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from apiflask import APIFlask
+from apiflask import APIFlask, HTTPBasicAuth
 from config import Config
 from app.extensions import db
 
@@ -13,8 +13,12 @@ def create_app(config_class=Config):
     # Register blueprints here
     from app.students import bp as routes_bp
     from app.courses import bp as courses_bp
+    from app.users import bp as users_bp
+    from app.login import bp as login_bp
     app.register_blueprint(routes_bp, url_prefix='/students')
     app.register_blueprint(courses_bp, url_prefix='/courses')
+    app.register_blueprint(users_bp, url_prefix='/users')
+    app.register_blueprint(login_bp, url_prefix='/login')
 
     # Datenbanktabellen anlegen
     with app.app_context():

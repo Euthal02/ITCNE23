@@ -1,5 +1,6 @@
 from app.users import bp 
 from app.extensions import db
+from werkzeug.security import generate_password_hash
 
 from app.models.users import UsersModel, UsersIn, UsersOut
 
@@ -21,7 +22,12 @@ def view_user_by_id(user_id, database_table=UsersModel):
 @bp.input(UsersIn, location='json')
 @bp.output(UsersOut, status_code=201)
 def create_user(json_data, database_table=UsersModel):
-    user = database_table(**json_data)
+    modified_json = {
+        "name": json_data["name"],
+        "email": json_data["email"],
+        "password": generate_password_hash(json_data["password"])
+    }
+    user = database_table(**modified_json)
     db.session.add(user)
     db.session.commit()
     return user
@@ -33,7 +39,10 @@ def create_user(json_data, database_table=UsersModel):
 def update_user(user_id, json_data, database_table=UsersModel):
     user = db.get_or_404(database_table, user_id)
     for key, value in json_data.items():
-        setattr(user, key, value)
+        insert_data = value
+        if key == "password":
+            insert_data = generate_password_hash(value)
+        setattr(user, key, insert_data)
     db.session.commit()
     return user
 

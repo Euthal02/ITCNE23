@@ -21,7 +21,7 @@ services:
   msvc-db:
     image: mysql:5.7
     container_name: msvc-db
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: msvc

@@ -1,9 +1,12 @@
 from app.courses import bp 
 from app.extensions import db
+from apiflask import HTTPBasicAuth
 
 from app.models.course import CoursesModel, CoursesIn, CoursesOut
 from app.models.student import StudentsModel, StudentIn, StudentOut
 from app.models.registration import RegistrationStudentIn, RegistrationModel
+
+auth = HTTPBasicAuth()
 
 def association_exists(table_a_id, table_b_id):
     association = RegistrationModel.query.filter_by(student_id=table_a_id, course_id=table_b_id).first()
@@ -24,6 +27,7 @@ def view_courses_by_id(course_id, database_table=CoursesModel):
 
 # create new course
 @bp.post('/create')
+@bp.auth_required(auth)
 @bp.input(CoursesIn, location='json')
 @bp.output(CoursesOut, status_code=201)
 def create_course(json_data, database_table=CoursesModel):

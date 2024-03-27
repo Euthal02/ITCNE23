@@ -1,5 +1,5 @@
 from apiflask import APIBlueprint
 
-bp = APIBlueprint('student', __name__)
+bp = APIBlueprint('user', __name__)
 
 from app.users import routes
