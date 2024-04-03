@@ -1,12 +1,10 @@
 from app.courses import bp 
 from app.extensions import db
-from apiflask import HTTPBasicAuth
-
+from app.auth import token_auth
 from app.models.course import CoursesModel, CoursesIn, CoursesOut
 from app.models.student import StudentsModel, StudentIn, StudentOut
 from app.models.registration import RegistrationStudentIn, RegistrationModel
 
-auth = HTTPBasicAuth()
 
 def association_exists(table_a_id, table_b_id):
     association = RegistrationModel.query.filter_by(student_id=table_a_id, course_id=table_b_id).first()
@@ -14,12 +12,14 @@ def association_exists(table_a_id, table_b_id):
 
 # get all courses
 @bp.get('/')
+@bp.auth_required(token_auth)
 @bp.output(CoursesOut(many=True))
 def view_courses(database_table=CoursesModel):
     return database_table.query.all()
 
 # get course by id
 @bp.get('/<int:course_id>')
+@bp.auth_required(token_auth)
 @bp.output(CoursesOut)
 def view_courses_by_id(course_id, database_table=CoursesModel):
     course = db.get_or_404(database_table, course_id)
@@ -27,7 +27,7 @@ def view_courses_by_id(course_id, database_table=CoursesModel):
 
 # create new course
 @bp.post('/create')
-@bp.auth_required(auth)
+@bp.auth_required(token_auth)
 @bp.input(CoursesIn, location='json')
 @bp.output(CoursesOut, status_code=201)
 def create_course(json_data, database_table=CoursesModel):
@@ -38,6 +38,7 @@ def create_course(json_data, database_table=CoursesModel):
 
 # change the information for a db entry
 @bp.patch('/<int:course_id>/edit')
+@bp.auth_required(token_auth)
 @bp.input(CoursesIn(partial=True), location='json')
 @bp.output(CoursesOut)
 def update_course(course_id, json_data, database_table=CoursesModel):
@@ -49,6 +50,7 @@ def update_course(course_id, json_data, database_table=CoursesModel):
 
 # remove course by id
 @bp.delete('/<int:course_id>/remove')
+@bp.auth_required(token_auth)
 @bp.output(CoursesOut)
 def delete_course(course_id, database_table=CoursesModel):
     course = db.get_or_404(database_table, course_id)
@@ -58,6 +60,7 @@ def delete_course(course_id, database_table=CoursesModel):
 
 # register a student with a course
 @bp.post('/<int:course_id>/register')
+@bp.auth_required(token_auth)
 @bp.input(RegistrationStudentIn, location='json')
 @bp.output(CoursesOut, status_code=201)
 def register_student(course_id, json_data):
@@ -77,6 +80,7 @@ def register_student(course_id, json_data):
 
 # get all students of a course
 @bp.get('/<int:course_id>/students')
+@bp.auth_required(token_auth)
 @bp.output(StudentOut(many=True))
 def get_course_students(course_id, database_table=CoursesModel):
     course = db.get_or_404(database_table, course_id)
@@ -85,6 +89,7 @@ def get_course_students(course_id, database_table=CoursesModel):
 
 # remove student from course
 @bp.delete('/<int:course_id>/unregister')
+@bp.auth_required(token_auth)
 @bp.input(RegistrationStudentIn, location='json')
 @bp.output(CoursesOut, status_code=201)
 def delete_association(course_id, json_data):

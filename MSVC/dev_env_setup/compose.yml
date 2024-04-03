@@ -11,6 +11,7 @@ services:
     environment:
       - DATABASE_URI=mysql+mysqlconnector://root:root@msvc-db:3306/msvc
       - CHOKIDAR_USEPOLLING=true
+      - SECRET_KEY=hallomarco!8844
       - FLASK_DEBUG=1
       - FLASK_HOST=0.0.0.0
       - FLASK_PORT=5000
