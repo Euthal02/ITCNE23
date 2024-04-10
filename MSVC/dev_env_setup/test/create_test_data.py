@@ -1,6 +1,7 @@
 from app.extensions import db
 from app.models.student import StudentsModel
 from app.models.course import CoursesModel
+from app.models.users import UsersModel
 
 # Hilfsfunktion (Testdaten erstellen, Tabellen erstellen)
 def create_test_data():
@@ -34,5 +35,17 @@ def create_test_data():
     course_ref = CoursesModel(topic='M347 Kubernetes')
     db.session.add(course_ref)
     student_ref.courses.append(course_ref)
+
+    # Beispieldaten
+    users = [
+        {'name': 'test', 'email': 'test@test.ch', 'password': 'test'}
+    ]
+    for user_data in users:
+        user = UsersModel(**user_data)
+        db.session.add(user)
+
+    # create an additional student and safe ref for later
+    student_ref = StudentsModel(name='Mega Tron', level='HF')
+    db.session.add(student_ref)
 
     db.session.commit()

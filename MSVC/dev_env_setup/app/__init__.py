@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from apiflask import APIFlask
+import flask_monitoringdashboard as dashboard
 from config import Config
 from app.extensions import db
 
@@ -26,5 +27,9 @@ def create_app(config_class=Config):
     @app.get('/')
     def absolute_root_path():
         return {'message': 'this is the feature branch'}
+
+    if app.config['DASHBOARD_ENABLED']:
+        dashboard.config.init_from(file='monitoring_dashboard_config.cfg')
+        dashboard.bind(app)
 
     return app

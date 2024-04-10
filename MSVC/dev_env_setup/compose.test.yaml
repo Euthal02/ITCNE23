@@ -1,8 +1,6 @@
 version: '3.9'
-
 services:
-
-  msvc-bp-prod-api:
+  msvc-bp-test-api:
     build:
       context: .
       dockerfile: 'Dockerfile.test'

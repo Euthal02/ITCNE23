@@ -8,4 +8,5 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os_environ.get('DATABASE_URI')\
         or 'sqlite:///' + os_path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DASHBOARD_ENABLED = os_environ.get('DASHBOARD_ENABLED') or False
 
