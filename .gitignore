@@ -2,4 +2,4 @@ venv/
 .idea/
 *.pptx
 .obsidian/
-*/.git
+**/.git
