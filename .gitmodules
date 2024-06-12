@@ -1,3 +1,15 @@
-[submodule "MSVC/msvc"]
-	path = MSVC/msvc
+[submodule "MSVC/ma-app"]
+	path = MSVC/ma-app
+	url = https://gitlab.com/ch-tbz-wb/TE/modules/msvc/mikro-adventures/ma-app.git
+
+[submodule "MSVC/blueprint-flask-graphql"]
+	path = MSVC/blueprint-flask-graphql
+	url = https://gitlab.com/tbz-itcne23-msvc/blueprint-flask-prod.git
+
+[submodule "MSVC/game_room"]
+	path = MSVC/game_room
+	url = https://gitlab.com/meuthak/msvc-game-room.git
+
+[submodule "MSVC/dev_env_setup"]
+	path = MSVC/dev_env_setup
 	url = https://gitlab.com/meuthak/msvc.git
