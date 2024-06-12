@@ -1,0 +1,12 @@
+[submodule "ma-app"]
+	path = ma-app
+	url = git@gitlab.com:ch-tbz-wb/TE/modules/msvc/mikro-adventures/ma-app.git
+[submodule "blueprint-flask-graphql"]
+	path = blueprint-flask-graphql
+	url = git@gitlab.com:tbz-itcne23-msvc/blueprint-flask-graphql.git
+[submodule "game_room"]
+	path = game_room
+	url = git@gitlab.com:meuthak/msvc-game-room.git
+[submodule "dev_env_setup"]
+	path = dev_env_setup
+	url = git@gitlab.com:meuthak/msvc.git
