@@ -1,0 +1,3 @@
+[submodule "MSVC/msvc"]
+	path = MSVC/msvc
+	url = https://gitlab.com/meuthak/msvc.git
