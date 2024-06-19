@@ -13,6 +13,7 @@
 [submodule "MSVC/dev_env_setup"]
 	path = MSVC/dev_env_setup
 	url = https://gitlab.com/meuthak/msvc.git
+
 [submodule "MSVC/blueprint-flask-redis"]
 	path = MSVC/blueprint-flask-redis
 	url = https://gitlab.com/tbz-itcne23-msvc/blueprint-flask-redis.git
