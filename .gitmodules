@@ -17,3 +17,7 @@
 [submodule "MSVC/blueprint-flask-redis"]
 	path = MSVC/blueprint-flask-redis
 	url = https://gitlab.com/tbz-itcne23-msvc/blueprint-flask-redis.git
+
+[submodule "MSVC/blueprint-flask-redis"]
+	path = CNC/yaml_files/kubernetes-homelab
+	url = https://github.com/pstark-code/kubernetes-homelab.git
